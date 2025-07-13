@@ -160,7 +160,7 @@ export function CustomerReviewsSection() {
             </div>
             <div className="bg-card rounded-xl p-4 shadow-[var(--shadow-soft)]">
               <div className="text-2xl font-bold text-primary mb-1">24/7</div>
-              <div class Name="text-sm text-muted-foreground">Available</div>
+              <div className="text-sm text-muted-foreground">Available</div>
             </div>
           </div>
         </div>
