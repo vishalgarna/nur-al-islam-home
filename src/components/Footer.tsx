@@ -1,28 +1,36 @@
 
-import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube, MessageCircle } from "lucide-react";
 
 export function Footer() {
   const navigationLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Articles", href: "/articles" },
-    { name: "Resources", href: "/resources" },
+    { name: "Blogs", href: "/blogs" },
+    { name: "Services", href: "/services" },
     { name: "Contact", href: "/contact" }
   ];
 
-  const resourceLinks = [
-    { name: "Zodiac Signs", href: "/zodiac" },
-    { name: "Birth Charts", href: "/birth-charts" },
-    { name: "Daily Horoscopes", href: "/horoscopes" },
-    { name: "Compatibility", href: "/compatibility" },
-    { name: "Moon Phases", href: "/moon-phases" }
+  const serviceLinks = [
+    { name: "Love Problem Solution", href: "/love-problem-solution" },
+    { name: "Marriage Solution", href: "/marriage-solution" },
+    { name: "Family Problem Solution", href: "/family-problem-solution" },
+    { name: "Black Magic Removal", href: "/black-magic-removal" },
+    { name: "Husband Wife Dispute", href: "/husband-wife-dispute" }
+  ];
+
+  const locationServices = [
+    { name: "Astrologer in Delhi", href: "/astrologer-delhi" },
+    { name: "Astrologer in Mumbai", href: "/astrologer-mumbai" },
+    { name: "Astrologer in Bangalore", href: "/astrologer-bangalore" },
+    { name: "Astrologer in Kolkata", href: "/astrologer-kolkata" },
+    { name: "Astrologer in Gujarat", href: "/astrologer-gujarat" }
   ];
 
   const socialLinks = [
-    { name: "Facebook", icon: Facebook, href: "#" },
-    { name: "Twitter", icon: Twitter, href: "#" },
-    { name: "Instagram", icon: Instagram, href: "#" },
-    { name: "YouTube", icon: Youtube, href: "#" }
+    { name: "Facebook", icon: Facebook, href: "https://facebook.com", color: "hover:text-blue-500" },
+    { name: "Twitter", icon: Twitter, href: "https://twitter.com", color: "hover:text-blue-400" },
+    { name: "Instagram", icon: Instagram, href: "https://instagram.com", color: "hover:text-pink-500" },
+    { name: "YouTube", icon: Youtube, href: "https://youtube.com", color: "hover:text-red-500" }
   ];
 
   return (
@@ -40,25 +48,36 @@ export function Footer() {
                 Stellar Guide
               </h3>
               <p className="text-primary-foreground/80 leading-relaxed mb-6">
-                Your cosmic companion for navigating life through the wisdom of the stars. 
-                Join our community of celestial seekers and cosmic explorers.
+                Your trusted astrology companion for navigating life through cosmic wisdom. 
+                Expert guidance for love, marriage, family, and spiritual problems.
               </p>
               
               {/* Contact Info */}
-              <div className="space-y-2 text-sm text-primary-foreground/70">
+              <div className="space-y-2 text-sm text-primary-foreground/70 mb-6">
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
                   <span>info@stellarguide.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-STAR</span>
+                  <span>+91 98765 43210</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
-                  <span>Guiding Souls Worldwide</span>
+                  <span>Serving Worldwide</span>
                 </div>
               </div>
+
+              {/* WhatsApp Button */}
+              <a 
+                href="https://wa.me/919876543210" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors font-medium"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp Consultation
+              </a>
             </div>
 
             {/* Quick Links */}
@@ -78,15 +97,15 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Resources */}
+            {/* Astrology Services */}
             <div>
-              <h4 className="font-semibold mb-4">Astrology Resources</h4>
+              <h4 className="font-semibold mb-4">Our Services</h4>
               <ul className="space-y-2">
-                {resourceLinks.map((link) => (
+                {serviceLinks.map((link) => (
                   <li key={link.name}>
                     <a 
                       href={link.href} 
-                      className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                      className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm"
                     >
                       {link.name}
                     </a>
@@ -95,31 +114,39 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Newsletter & Social */}
+            {/* Location Services & Social */}
             <div>
-              <h4 className="font-semibold mb-4">Stay Connected</h4>
-              <p className="text-primary-foreground/80 text-sm mb-4">
-                Follow us for daily cosmic content and stellar community updates.
-              </p>
+              <h4 className="font-semibold mb-4">Location Services</h4>
+              <ul className="space-y-2 mb-6">
+                {locationServices.map((link) => (
+                  <li key={link.name}>
+                    <a 
+                      href={link.href} 
+                      className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
               
               {/* Social Links */}
-              <div className="flex gap-3 mb-6">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
-                    aria-label={social.name}
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-                ))}
-              </div>
-
-              {/* Inspirational Quote */}
-              <div className="text-sm text-primary-foreground/70 italic">
-                "We are all made of star stuff."
-                <div className="text-xs mt-1">— Carl Sagan</div>
+              <div>
+                <h5 className="font-medium mb-3">Follow Us</h5>
+                <div className="flex gap-3">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-primary-foreground/20 transition-all ${social.color}`}
+                      aria-label={social.name}
+                    >
+                      <social.icon className="w-5 h-5" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -130,7 +157,7 @@ export function Footer() {
           <div className="container-islamic py-6">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="text-sm text-primary-foreground/70">
-                © 2024 Stellar Guide. All rights reserved.
+                © 2024 Stellar Guide. All rights reserved. Best Muslim Astrologer Services.
               </div>
               
               <div className="flex items-center gap-4 text-sm text-primary-foreground/70">
@@ -143,7 +170,7 @@ export function Footer() {
                 </a>
                 <span>•</span>
                 <div className="flex items-center gap-1">
-                  Made with <Heart className="w-3 h-3 text-red-400" /> for stargazers
+                  Made with <Heart className="w-3 h-3 text-red-400" /> for spiritual guidance
                 </div>
               </div>
             </div>
