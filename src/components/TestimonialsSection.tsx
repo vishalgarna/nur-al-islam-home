@@ -1,59 +1,55 @@
+
 import { useState, useEffect } from "react";
 import { Quote } from "lucide-react";
 
 export function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const islamicQuotes = [
+  const astrologicalQuotes = [
     {
-      text: "And it is He who created the heavens and earth in truth. And the day He says, 'Be,' and it is, His word is the truth.",
-      source: "Quran 6:73",
-      type: "verse"
+      text: "The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself.",
+      source: "Carl Sagan",
+      type: "wisdom"
     },
     {
-      text: "The best of people are those who benefit others.",
-      source: "Prophet Muhammad (PBUH)",
-      type: "hadith"
+      text: "As above, so below, as within, so without, as the universe, so the soul.",
+      source: "Hermes Trismegistus",
+      type: "ancient"
     },
     {
-      text: "And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose.",
-      source: "Quran 65:3",
-      type: "verse"
+      text: "The stars impel, they do not compel. What we make of their influence is up to us.",
+      source: "Ancient Wisdom",
+      type: "wisdom"
     },
     {
-      text: "A believer is not one who eats his fill while his neighbor goes hungry.",
-      source: "Prophet Muhammad (PBUH)",
-      type: "hadith"
-    },
-    {
-      text: "And give good tidings to the patient, Who, when disaster strikes them, say, 'Indeed we belong to Allah, and indeed to Him we will return.'",
-      source: "Quran 2:155-156",
-      type: "verse"
+      text: "We are born at a given moment, in a given place, and like vintage years of wine, we have the qualities of the year and season in which we are born.",
+      source: "Carl Jung",
+      type: "ancient"
     }
   ];
 
   const testimonials = [
     {
-      text: "This platform has truly transformed my understanding of Islam. The articles are beautifully written and deeply meaningful.",
-      author: "Sister Aisha",
+      text: "My daily horoscope was incredibly accurate and helped me navigate a difficult decision at work!",
+      author: "Sarah M.",
+      location: "New York, USA",
+      type: "testimonial"
+    },
+    {
+      text: "The birth chart reading was so insightful - it explained so much about my personality and relationships.",
+      author: "Michael R.",
       location: "London, UK",
       type: "testimonial"
     },
     {
-      text: "The community here is so welcoming and supportive. I've learned so much from the weekly study circles.",
-      author: "Brother Omar",
-      location: "Toronto, Canada",
-      type: "testimonial"
-    },
-    {
-      text: "As a new Muslim, I found exactly what I was looking for - authentic, accessible Islamic knowledge presented with love.",
-      author: "Sister Maria",
-      location: "Barcelona, Spain",
+      text: "I love the daily insights and cosmic guidance. It's become part of my morning routine!",
+      author: "Luna P.",
+      location: "Los Angeles, USA",
       type: "testimonial"
     }
   ];
 
-  const allContent = [...islamicQuotes, ...testimonials];
+  const allContent = [...astrologicalQuotes, ...testimonials];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -113,15 +109,15 @@ export function TestimonialsSection() {
           {/* Content Type Indicator */}
           <div className="mt-6">
             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
-              currentContent.type === 'verse' 
+              currentContent.type === 'wisdom' 
                 ? 'bg-primary/10 text-primary' 
-                : currentContent.type === 'hadith'
+                : currentContent.type === 'ancient'
                 ? 'bg-sage/20 text-sage'
                 : 'bg-gold/20 text-gold'
             }`}>
-              {currentContent.type === 'verse' && '📖 Quranic Verse'}
-              {currentContent.type === 'hadith' && '💎 Prophetic Wisdom'}
-              {currentContent.type === 'testimonial' && '💙 Community Voice'}
+              {currentContent.type === 'wisdom' && '✨ Cosmic Wisdom'}
+              {currentContent.type === 'ancient' && '🔮 Ancient Knowledge'}
+              {currentContent.type === 'testimonial' && '⭐ Community Voice'}
             </span>
           </div>
         </div>

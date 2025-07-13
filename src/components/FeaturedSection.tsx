@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock } from "lucide-react";
 import article1 from "@/assets/article-1.jpg";
@@ -8,30 +9,30 @@ export function FeaturedSection() {
   const articles = [
     {
       id: 1,
-      title: "Understanding the Five Daily Prayers",
-      excerpt: "A comprehensive guide to the spiritual significance and practical aspects of Salah in our daily lives.",
+      title: "Understanding Your Rising Sign",
+      excerpt: "Discover how your rising sign shapes your personality and first impressions, revealing the cosmic mask you wear in the world.",
       image: article1,
       date: "March 15, 2024",
       readTime: "8 min read",
-      category: "Worship"
+      category: "Birth Charts"
     },
     {
       id: 2,
-      title: "The Beauty of Dhikr and Remembrance",
-      excerpt: "Explore the peaceful practice of remembering Allah and its transformative effects on the heart and soul.",
+      title: "How Mercury Retrograde Affects You",
+      excerpt: "Navigate the cosmic chaos of Mercury retrograde with practical tips and insights for each zodiac sign.",
       image: article2,
       date: "March 12, 2024",
       readTime: "6 min read",
-      category: "Spirituality"
+      category: "Planetary Transits"
     },
     {
       id: 3,
-      title: "Finding Peace in Times of Hardship",
-      excerpt: "Islamic wisdom and guidance for navigating life's challenges with faith, patience, and trust in Allah.",
+      title: "Zodiac Compatibility Guide",
+      excerpt: "Explore the cosmic connections between signs and discover which partnerships are written in the stars.",
       image: article3,
       date: "March 10, 2024",
       readTime: "10 min read",
-      category: "Guidance"
+      category: "Compatibility"
     }
   ];
 
@@ -41,11 +42,11 @@ export function FeaturedSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-            Featured Articles
+            Featured Astrology Articles
           </h2>
           <p className="text-lg text-muted-foreground">
-            Discover enlightening articles that deepen your understanding of Islam 
-            and provide practical guidance for your spiritual journey.
+            Discover enlightening articles that deepen your understanding of astrology 
+            and provide cosmic guidance for your spiritual journey.
           </p>
         </div>
 

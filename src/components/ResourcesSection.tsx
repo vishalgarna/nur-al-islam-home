@@ -1,41 +1,42 @@
-import { BookOpen, Heart, Users, MessageCircle, Moon, Compass } from "lucide-react";
+
+import { Star, Calculator, Calendar, Heart, Moon, BookOpen } from "lucide-react";
 
 export function ResourcesSection() {
   const categories = [
     {
-      icon: BookOpen,
-      title: "Quran",
-      description: "Read, listen, and explore the Holy Quran with translations and tafsir",
+      icon: Star,
+      title: "Zodiac Signs",
+      description: "Explore all 12 zodiac signs and their unique characteristics",
       color: "primary"
     },
     {
-      icon: MessageCircle,
-      title: "Hadith",
-      description: "Authentic sayings and teachings of Prophet Muhammad (PBUH)",
+      icon: Calculator,
+      title: "Birth Chart Calculator",
+      description: "Generate your personalized natal chart and cosmic blueprint",
       color: "sage"
     },
     {
-      icon: Compass,
-      title: "Fiqh",
-      description: "Islamic jurisprudence and practical guidance for daily life",
+      icon: Calendar,
+      title: "Daily Horoscopes",
+      description: "Get your personalized daily readings and cosmic guidance",
       color: "gold"
     },
     {
-      icon: Users,
-      title: "Stories of Prophets",
-      description: "Inspiring narratives from the lives of Allah's messengers",
+      icon: Heart,
+      title: "Compatibility Reports",
+      description: "Discover your romantic and friendship compatibility matches",
       color: "primary"
     },
     {
-      icon: Heart,
-      title: "Duas & Dhikr",
-      description: "Beautiful supplications and remembrance of Allah",
+      icon: Moon,
+      title: "Moon Phases",
+      description: "Understand lunar cycles and their influence on your life",
       color: "sage"
     },
     {
-      icon: Moon,
-      title: "Islamic Calendar",
-      description: "Important dates, festivals, and religious observances",
+      icon: BookOpen,
+      title: "Astrology 101",
+      description: "Learn the fundamentals of astrology and cosmic wisdom",
       color: "gold"
     }
   ];
@@ -72,11 +73,11 @@ export function ResourcesSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-            Islamic Resources
+            Astrology Resources
           </h2>
           <p className="text-lg text-muted-foreground">
-            Explore our comprehensive collection of Islamic knowledge organized 
-            into categories for easy access and learning.
+            Explore our comprehensive collection of astrological tools and knowledge 
+            organized into categories for easy access and cosmic discovery.
           </p>
         </div>
 
@@ -110,13 +111,13 @@ export function ResourcesSection() {
           ))}
         </div>
 
-        {/* Islamic Quote */}
+        {/* Inspirational Quote */}
         <div className="mt-16 text-center">
           <div className="max-w-2xl mx-auto bg-gradient-to-r from-primary-light to-sage-light p-8 rounded-2xl">
             <p className="text-primary font-medium text-lg italic mb-2">
-              "Read in the name of your Lord who created"
+              "As above, so below; as within, so without"
             </p>
-            <p className="text-muted-foreground text-sm">— Quran 96:1</p>
+            <p className="text-muted-foreground text-sm">— Hermetic Principle</p>
           </div>
         </div>
       </div>

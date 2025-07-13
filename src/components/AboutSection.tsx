@@ -1,26 +1,27 @@
-import { Heart, Book, Users, Star } from "lucide-react";
+
+import { Star, Calendar, Heart, Users } from "lucide-react";
 
 export function AboutSection() {
   const features = [
     {
-      icon: Book,
-      title: "Authentic Knowledge",
-      description: "Carefully curated Islamic resources from trusted scholars and sources"
-    },
-    {
-      icon: Heart,
-      title: "Spiritual Growth",
-      description: "Tools and guidance to strengthen your connection with Allah"
-    },
-    {
-      icon: Users,
-      title: "Community",
-      description: "Connect with fellow Muslims on their journey of faith"
+      icon: Calendar,
+      title: "Daily Horoscopes",
+      description: "Get free personalized daily readings tailored to your zodiac sign"
     },
     {
       icon: Star,
-      title: "Excellence",
-      description: "Committed to providing the highest quality Islamic content"
+      title: "Birth Charts",
+      description: "Understand your true astrological self with detailed birth chart analysis"
+    },
+    {
+      icon: Heart,
+      title: "Compatibility Reports",
+      description: "See how your signs align with others in love and friendship"
+    },
+    {
+      icon: Users,
+      title: "Expert Guidance",
+      description: "Insightful advice from experienced astrologers and cosmic wisdom"
     }
   ];
 
@@ -35,24 +36,24 @@ export function AboutSection() {
                 Our Mission
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                We aim to provide authentic Islamic resources, articles, and community 
-                connections to help you grow in faith. Our platform serves as a bridge 
-                between traditional Islamic knowledge and the modern world.
+                We aim to make Astrology accessible and insightful for everyone. 
+                Our platform provides daily horoscopes, birth chart analysis, and 
+                personalized guidance to help you navigate life's journey.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Every piece of content is carefully reviewed to ensure it aligns with 
-                authentic Islamic teachings, helping you deepen your understanding and 
-                strengthen your relationship with Allah.
+                Every piece of astrological insight is carefully crafted to provide 
+                meaningful guidance, helping you understand the cosmic influences 
+                that shape your daily life and long-term destiny.
               </p>
             </div>
 
-            {/* Islamic Quote */}
+            {/* Inspirational Quote */}
             <div className="bg-card p-6 rounded-xl border-l-4 border-gold shadow-soft">
               <p className="text-primary font-medium italic">
-                "And whoever relies upon Allah - then He is sufficient for him. 
-                Indeed, Allah will accomplish His purpose."
+                "The stars are the blueprint of your soul, written in the language 
+                of light across the infinite cosmos."
               </p>
-              <p className="text-muted-foreground text-sm mt-2">— Quran 65:3</p>
+              <p className="text-muted-foreground text-sm mt-2">— Ancient Wisdom</p>
             </div>
           </div>
 

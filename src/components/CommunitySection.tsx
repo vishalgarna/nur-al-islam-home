@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Calendar, Users, BookOpen, MessageSquare } from "lucide-react";
@@ -10,21 +11,21 @@ export function CommunitySection() {
   const events = [
     {
       icon: Calendar,
-      title: "Weekly Halaqas",
-      description: "Join our weekly study circles every Friday",
+      title: "Weekly Horoscope Live",
+      description: "Join our live weekly horoscope sessions",
       time: "Fridays 7:00 PM"
     },
     {
-      icon: BookOpen,
-      title: "Quran Study",
-      description: "Interactive Quran study sessions",
+      icon: MessageSquare,
+      title: "Astrology Q&A",
+      description: "Get your cosmic questions answered by experts",
       time: "Tuesdays 8:00 PM"
     },
     {
-      icon: MessageSquare,
-      title: "Discussion Forum",
-      description: "Engage with fellow Muslims online",
-      time: "Always Active"
+      icon: BookOpen,
+      title: "Birth Chart Workshops",
+      description: "Learn to read and interpret birth charts",
+      time: "Monthly Events"
     }
   ];
 
@@ -53,13 +54,13 @@ export function CommunitySection() {
           {/* Community Events */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
-              Join Our Community
+              Join Our Astrology Community
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Connect with fellow Muslims, participate in study circles, and grow 
-              together in faith. Our community welcomes learners at every stage 
-              of their spiritual journey.
+              Connect with fellow astrology enthusiasts, participate in live discussions, 
+              and receive exclusive cosmic insights. Our community welcomes stargazers 
+              at every stage of their celestial journey.
             </p>
 
             <div className="space-y-6">
@@ -92,8 +93,8 @@ export function CommunitySection() {
                 Stay Connected
               </h3>
               <p className="text-muted-foreground">
-                Subscribe to our newsletter for weekly Islamic insights, 
-                prayer reminders, and community updates.
+                Get weekly cosmic insights, planetary updates, and exclusive 
+                event invitations delivered to your inbox.
               </p>
             </div>
 
@@ -118,11 +119,11 @@ export function CommunitySection() {
             <div className="mt-6 space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-gold rounded-full"></div>
-                <span>Weekly Islamic insights and reflections</span>
+                <span>Weekly horoscopes and cosmic insights</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-gold rounded-full"></div>
-                <span>Prayer time reminders and Islamic calendar</span>
+                <span>Planetary transit alerts and moon phase updates</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-gold rounded-full"></div>

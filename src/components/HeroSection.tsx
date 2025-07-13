@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
 
@@ -23,29 +24,29 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container-islamic text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-          {/* Arabic Basmala */}
-          <div className="text-gold font-arabic text-2xl md:text-3xl mb-6 opacity-90">
-            بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+          {/* Celestial Symbol */}
+          <div className="text-gold font-display text-2xl md:text-3xl mb-6 opacity-90">
+            ✦ ☽ ✧ ☾ ✦
           </div>
 
           {/* Main Heading */}
           <h1 className="heading-islamic text-balance">
-            Bringing Islamic Knowledge to All
+            Discover What the Stars Say About You
           </h1>
 
           {/* Subheading */}
           <p className="subheading-islamic max-w-2xl mx-auto text-balance">
-            Connect with your faith through authentic Islamic resources, spiritual guidance, 
-            and a community dedicated to growing closer to Allah.
+            Free Daily Horoscopes, Birth Charts & Personalized Astrology Insights 
+            to guide you through life's cosmic journey.
           </p>
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
             <Button className="btn-islamic">
-              Explore Resources
+              Check Your Horoscope
             </Button>
             <Button variant="outline" className="btn-islamic-outline">
-              Join Community
+              Generate Birth Chart
             </Button>
           </div>
 

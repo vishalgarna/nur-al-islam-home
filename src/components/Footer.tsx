@@ -1,3 +1,4 @@
+
 import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 
 export function Footer() {
@@ -6,16 +7,15 @@ export function Footer() {
     { name: "About", href: "/about" },
     { name: "Articles", href: "/articles" },
     { name: "Resources", href: "/resources" },
-    { name: "Community", href: "/community" },
     { name: "Contact", href: "/contact" }
   ];
 
   const resourceLinks = [
-    { name: "Quran", href: "/quran" },
-    { name: "Hadith", href: "/hadith" },
-    { name: "Duas", href: "/duas" },
-    { name: "Islamic Calendar", href: "/calendar" },
-    { name: "Prayer Times", href: "/prayer-times" }
+    { name: "Zodiac Signs", href: "/zodiac" },
+    { name: "Birth Charts", href: "/birth-charts" },
+    { name: "Daily Horoscopes", href: "/horoscopes" },
+    { name: "Compatibility", href: "/compatibility" },
+    { name: "Moon Phases", href: "/moon-phases" }
   ];
 
   const socialLinks = [
@@ -37,26 +37,26 @@ export function Footer() {
             {/* Brand Section */}
             <div className="lg:col-span-1">
               <h3 className="text-2xl font-bold mb-4 font-display">
-                Nur Al-Islam
+                Stellar Guide
               </h3>
               <p className="text-primary-foreground/80 leading-relaxed mb-6">
-                Bringing authentic Islamic knowledge to hearts around the world. 
-                Join our community of learners and grow closer to Allah.
+                Your cosmic companion for navigating life through the wisdom of the stars. 
+                Join our community of celestial seekers and cosmic explorers.
               </p>
               
               {/* Contact Info */}
               <div className="space-y-2 text-sm text-primary-foreground/70">
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
-                  <span>info@nuralislam.org</span>
+                  <span>info@stellarguide.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+1 (555) 123-STAR</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
-                  <span>Serving Muslims Worldwide</span>
+                  <span>Guiding Souls Worldwide</span>
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@ export function Footer() {
 
             {/* Resources */}
             <div>
-              <h4 className="font-semibold mb-4">Islamic Resources</h4>
+              <h4 className="font-semibold mb-4">Astrology Resources</h4>
               <ul className="space-y-2">
                 {resourceLinks.map((link) => (
                   <li key={link.name}>
@@ -99,7 +99,7 @@ export function Footer() {
             <div>
               <h4 className="font-semibold mb-4">Stay Connected</h4>
               <p className="text-primary-foreground/80 text-sm mb-4">
-                Follow us for daily Islamic content and community updates.
+                Follow us for daily cosmic content and stellar community updates.
               </p>
               
               {/* Social Links */}
@@ -116,10 +116,10 @@ export function Footer() {
                 ))}
               </div>
 
-              {/* Islamic Quote */}
+              {/* Inspirational Quote */}
               <div className="text-sm text-primary-foreground/70 italic">
-                "And Allah is the best of planners."
-                <div className="text-xs mt-1">— Quran 8:30</div>
+                "We are all made of star stuff."
+                <div className="text-xs mt-1">— Carl Sagan</div>
               </div>
             </div>
           </div>
@@ -130,7 +130,7 @@ export function Footer() {
           <div className="container-islamic py-6">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="text-sm text-primary-foreground/70">
-                © 2024 Nur Al-Islam. All rights reserved.
+                © 2024 Stellar Guide. All rights reserved.
               </div>
               
               <div className="flex items-center gap-4 text-sm text-primary-foreground/70">
@@ -143,7 +143,7 @@ export function Footer() {
                 </a>
                 <span>•</span>
                 <div className="flex items-center gap-1">
-                  Made with <Heart className="w-3 h-3 text-red-400" /> for the Ummah
+                  Made with <Heart className="w-3 h-3 text-red-400" /> for stargazers
                 </div>
               </div>
             </div>
