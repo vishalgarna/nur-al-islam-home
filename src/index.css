@@ -8,35 +8,63 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Islamic Theme - Soft greens, whites, and gold accents */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 160 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 160 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 160 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Soft emerald green as primary */
+    --primary: 150 45% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 150 30% 85%;
+    --primary-glow: 150 40% 35%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Very light green secondary */
+    --secondary: 150 20% 95%;
+    --secondary-foreground: 160 20% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 150 15% 96%;
+    --muted-foreground: 160 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Soft accent with slight green tint */
+    --accent: 150 25% 92%;
+    --accent-foreground: 160 20% 15%;
+
+    /* Gold accent for highlights */
+    --gold: 45 85% 55%;
+    --gold-foreground: 160 20% 15%;
+    --gold-light: 45 40% 95%;
+
+    /* Spiritual sage green */
+    --sage: 150 20% 70%;
+    --sage-light: 150 15% 88%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 150 15% 90%;
+    --input: 150 15% 95%;
+    --ring: 150 45% 25%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Islamic geometric pattern variables */
+    --pattern-opacity: 0.03;
+    --pattern-light: 0.02;
+
+    /* Elegant shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(150 25% 15% / 0.1);
+    --shadow-elegant: 0 8px 32px -8px hsl(150 25% 15% / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--gold) / 0.2);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +128,84 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Islamic geometric pattern background */
+  .geometric-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--primary)) var(--pattern-opacity) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, hsl(var(--gold)) var(--pattern-light) 1px, transparent 1px);
+    background-size: 60px 60px, 40px 40px;
+  }
+
+  .geometric-pattern-light {
+    background-image: 
+      radial-gradient(circle at 20% 20%, hsl(var(--primary)) var(--pattern-light) 1px, transparent 1px),
+      radial-gradient(circle at 80% 80%, hsl(var(--sage)) var(--pattern-light) 1px, transparent 1px);
+    background-size: 80px 80px, 60px 60px;
+  }
+}
+
+@layer components {
+  /* Islamic inspired typography */
+  .heading-islamic {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .subheading-islamic {
+    @apply text-xl md:text-2xl font-medium text-muted-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Card variants for Islamic theme */
+  .card-islamic {
+    @apply bg-card border border-border rounded-xl shadow-[var(--shadow-soft)] 
+           hover:shadow-[var(--shadow-elegant)] transition-[var(--transition-smooth)]
+           hover:scale-[1.02] hover:border-primary/20;
+  }
+
+  .card-islamic-gold {
+    @apply card-islamic border-gold/20 hover:border-gold/40 hover:shadow-[var(--shadow-glow)];
+  }
+
+  /* Button variants */
+  .btn-islamic {
+    @apply bg-primary text-primary-foreground hover:bg-primary-glow 
+           rounded-xl px-8 py-4 font-medium shadow-[var(--shadow-soft)]
+           hover:shadow-[var(--shadow-elegant)] transition-[var(--transition-smooth)]
+           hover:scale-105 active:scale-95;
+  }
+
+  .btn-islamic-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground
+           rounded-xl px-8 py-4 font-medium transition-[var(--transition-smooth)]
+           hover:scale-105 active:scale-95;
+  }
+
+  .btn-islamic-gold {
+    @apply bg-gold text-gold-foreground hover:bg-gold/90
+           rounded-xl px-8 py-4 font-medium shadow-[var(--shadow-glow)]
+           hover:scale-105 active:scale-95 transition-[var(--transition-smooth)];
+  }
+
+  /* Section spacing */
+  .section-islamic {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-islamic {
+    @apply container mx-auto px-4 md:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
